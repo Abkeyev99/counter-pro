@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [count, setCount] = useState(0);
+
+    const incHandler = () =>{setCount(count +1)}
+
+    const resetHandler = () =>{setCount( 0)}
+
+    const setHandler = () =>{}
+
+    return (
+        <div className="App">
+            <div className={count > 0 ? "positive" : "negative" } >{count}</div>
+            <div className="button">
+                <button  className="button-inc" onClick={incHandler} disabled={count === 10 ? true : false}>inc</button>
+                <button className="button-reset"  onClick={resetHandler}>reset</button>
+                <button className="button-set"  onClick={setHandler}>set</button>
+            </div>
+        </div>
+    );
 }
 
 export default App;
