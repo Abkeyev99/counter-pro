@@ -1,9 +1,21 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 
 function App() {
 
     const [count, setCount] = useState(0);
+
+    useEffect(()=> {
+        let countAsString = localStorage.getItem("counterValue")
+        if (countAsString) {
+            let newCount = JSON.parse(countAsString)
+            setCount(newCount)
+        }
+    },[])
+
+    useEffect(()=> {
+        localStorage.setItem('counterValue', JSON.stringify(count))
+    },[count])
 
     const incHandler = () =>{setCount(count +1)}
 
