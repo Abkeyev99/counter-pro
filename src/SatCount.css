@@ -1,0 +1,38 @@
+.App2 {
+    text-align: center;
+    width: 200px;
+    height: 110px;
+    border: 7px solid #ccc;
+    background: #eee;
+    padding: 15px 25px;
+    margin-top: 50px;
+}
+
+
+.button2 {
+    padding: 2px 1px;
+    width: 148px;
+    height: 30px;
+    border: 3px solid #ccc;
+    background: #eee;
+
+    margin: auto;
+}
+
+.input {
+    padding: 2px 3px;
+    margin-left: 5px;
+
+}
+
+.input2 {
+    padding: 2px 3px;
+    margin-left: 5px;
+
+}
+
+.button-set2 {
+    padding: 2px 3px;
+    margin-left: 5px;
+    background-color: dodgerblue;
+}
